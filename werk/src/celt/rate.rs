@@ -743,6 +743,7 @@ unsafe extern "C" fn interp_bits2pulses(
         *ebits.offset(j as isize) = *bits.offset(j as isize) >> stereo >> 3i32;
         if (C * *ebits.offset(j as isize)) << 3i32 != *bits.offset(j as isize) {
             eprintln!("Fatal (internal) error in rate.rs\n");
+            panic!()
         }
         *bits.offset(j as isize) = 0i32;
         *fine_priority.offset(j as isize) = (*ebits.offset(j as isize) < 1i32) as c_int;
