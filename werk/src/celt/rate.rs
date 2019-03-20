@@ -576,6 +576,7 @@ unsafe extern "C" fn interp_bits2pulses(
     }
     if codedBands <= start {
         eprintln!("Fatal (internal) error in rate.rs\n");
+        panic!()
     }
     if intensity_rsv > 0i32 {
         if 0 != encode {
@@ -653,6 +654,7 @@ unsafe extern "C" fn interp_bits2pulses(
         let bit: opus_int32;
         if *bits.offset(j as isize) < 0i32 {
             eprintln!("Fatal (internal) error in rate.rs\n");
+            panic!()
         }
         N0 = i32::from(*(*m).eBands.offset((j + 1i32) as isize))
             - i32::from(*(*m).eBands.offset(j as isize));
@@ -728,9 +730,11 @@ unsafe extern "C" fn interp_bits2pulses(
         balance = excess;
         if *bits.offset(j as isize) < 0i32 {
             eprintln!("Fatal (internal) error in rate.rs\n");
+            panic!()
         }
         if *ebits.offset(j as isize) < 0i32 {
             eprintln!("Fatal (internal) error in rate.rs\n");
+            panic!()
         }
         j += 1
     }
