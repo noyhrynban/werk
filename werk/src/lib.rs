@@ -11,6 +11,7 @@
 extern crate werk_sys;
 
 pub mod celt;
+pub mod silk;
 pub mod repacketizer;
 
 /// Workaround for https://github.com/rust-lang/rust/issues/18807
