@@ -36,7 +36,7 @@ files_fn! { opus_files;
 	src/opus_multistream.c,
 	src/opus_multistream_encoder.c,
 	src/opus_multistream_decoder.c,
-	src/repacketizer.c
+	// src/repacketizer.c
 }
 
 files_fn! { opus_files_float;
@@ -50,7 +50,7 @@ files_fn! { celt_files;
 	celt/celt.c,
 	celt/celt_encoder.c, // encoder -- not a priority ATM
 	celt/celt_decoder.c,
-	celt/cwrs.c,
+	// celt/cwrs.c,
 	// celt/entcode.c, -- SMALL_DIV_TABLE still missing
 	// celt/entdec.c,
 	celt/entenc.c, // encoder -- not a priority ATM
@@ -62,7 +62,7 @@ files_fn! { celt_files;
 	// celt/pitch.c,
 	// celt/celt_lpc.c,
 	// celt/quant_bands.c,
-	celt/rate.c,
+	// celt/rate.c,
 	// celt/vq.c
 }
 
